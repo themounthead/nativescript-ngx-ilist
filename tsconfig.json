@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es5",
+    "target": "es6",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "skipLibCheck": true,
@@ -17,7 +17,8 @@
       "*": [
         "./node_modules/tns-core-modules/*",
         "./node_modules/*"
-      ]
+      ],
+      "nativescript-ngx-ilist": ["./lib/index.ts"]
     }
   },
   "exclude": [

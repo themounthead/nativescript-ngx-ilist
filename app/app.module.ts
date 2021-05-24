@@ -1,7 +1,9 @@
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
-import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
-import { AppRoutingModule } from './app-routing.module';
+import { NO_ERRORS_SCHEMA, NgModule } from '@angular/core';
 
+import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
+import { IListModule } from 'nativescript-ngx-ilist';
+
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
@@ -13,15 +15,15 @@ import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
-      AppComponent,
-      HomeComponent,
+    AppComponent,
+    HomeComponent,
   ],
   imports: [
-      NativeScriptModule,
-      AppRoutingModule,
+    NativeScriptModule,
+    AppRoutingModule,
+    IListModule,
   ],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA],
 })
-export class AppModule {}
-
+export class AppModule { }

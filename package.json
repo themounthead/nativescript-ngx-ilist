@@ -1,9 +1,13 @@
 {
   "name": "NativescriptNgxIlist",
-  "license": "SEE LICENSE IN <your-license-filename>",
-  "version": "0.0.0",
+  "license": "MIT",
+  "version": "1.0.0",
   "nativescript": {
     "id": "org.nativescript.nativescriptngxilist"
+  },
+  "scripts": {
+    "packagr": "ng-packagr -p ./lib/ng-package.json && cp README.md ./dist && cp LICENSE ./dist",
+    "publish": "cd ./dist && npm publish"
   },
   "dependencies": {
     "@angular/animations": "~8.2.0",
@@ -15,21 +19,28 @@
     "@angular/platform-browser": "~8.2.0",
     "@angular/platform-browser-dynamic": "~8.2.0",
     "@angular/router": "~8.2.0",
+    "@ngrx/component-store": "^10.1.1",
     "nativescript-angular": "~8.20.0",
+    "ramda": "^0.27.1",
     "reflect-metadata": "~0.1.12",
-    "rxjs": "~6.4.0",
+    "rxjs": "^6.5.1",
     "tns-core-modules": "~6.3.0",
     "tslib": "1.10.0",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
+    "@angular-devkit/core": "~8.2.0",
     "@angular/cli": "~8.3.0",
     "@angular/compiler-cli": "~8.2.0",
-    "@angular-devkit/core": "~8.2.0",
+    "@nativescript/android": "8.0.0",
+    "@nativescript/ios": "7.2.0",
     "@nativescript/schematics": "~1.0.0",
-    "nativescript-dev-webpack": "~1.4.0",
     "@ngtools/webpack": "~8.2.0",
-    "typescript": "~3.5.3",
-    "node-sass": "^4.7.1"
+    "codelyzer": "^6.0.2",
+    "nativescript-dev-webpack": "~1.4.0",
+    "ng-packagr": "^11.2.4",
+    "node-sass": "^4.7.1",
+    "tslint": "^6.1.3",
+    "typescript": "~3.5.3"
   }
 }

@@ -1,6 +1,32 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<StackLayout>
-  <Label text="Tap the button"></Label>
-  <Button text="TAP" (tap)="onTap()"></Button>
-  <Label [text]="getMessage()" textWrap="true"></Label>
+<ActionBar height="0"></ActionBar>
+<StackLayout margin="30 10">
+  <IListView
+    height="75%"
+    borderColor="#000"
+    borderWidth="1"
+    limit="30"
+    [items]="items"
+    [templateRef]="templateRef"
+    (eofItems)="addMore()"
+  >
+    <ng-template #templateRef let-item="item" let-index="index">
+      <IListItem>
+        <IListContent>
+          <StackLayout height="30" borderWidth="1" borderColor="#F00" margin="8" verticalAlignment="center">
+            <Label text="Item--{{ index }}" marginLeft="8"></Label>
+          </StackLayout>
+        </IListContent>
+        <IListDivider>
+          <StackLayout height="10"></StackLayout>
+        </IListDivider>
+        <IListPlaceholder>
+          <StackLayout height="30" backgroundColor="#CEE" borderRadius="8" margin="8 0"></StackLayout>
+        </IListPlaceholder>
+      </IListItem>
+    </ng-template>
+  </IListView>
+
+  <FlexboxLayout justifyContent="center">
+    <Button text="Add Items" (tap)="addMore()"></Button>
+  </FlexboxLayout>
 </StackLayout>

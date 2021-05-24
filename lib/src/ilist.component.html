@@ -1,0 +1,5 @@
+  <StackLayout>
+    <ng-container *ngFor="let item of pageList; let index = index">
+      <ng-container *ngTemplateOutlet="templateRef; context: { item: item, index: index }"></ng-container>
+    </ng-container>
+  </StackLayout>

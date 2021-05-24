@@ -1,0 +1,5 @@
+App_Resources/
+node_modules/
+platforms/
+.git/
+dist/

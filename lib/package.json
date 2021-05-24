@@ -1,0 +1,23 @@
+{
+  "name": "nativescript-ngx-ilist",
+  "version": "1.0.0",
+  "description": "NativeScript + Angular Infinite List UI Control",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/themounthead/nativescript-ngx-ilist"
+  },
+  "nativescript": {
+    "platforms": {
+      "android": "6.5.4",
+      "ios": "6.5.3"
+    }
+  },
+  "author": "TheMountHead",
+  "license": "MIT",
+  "private": false,
+  "peerDependencies": {
+    "@angular/compiler": "~8.2.0",
+    "@angular/core": "~8.2.0",
+    "@ngrx/component-store": "^10.1.1"
+  }
+}

@@ -1,0 +1,13 @@
+<StackLayout ilist-item [id]="index">
+  <ng-container *ngIf="(isActive | async) === true">
+    <StackLayout [id]="index" #panelHandle>
+      <ng-content select="IListContent"></ng-content>
+    </StackLayout>
+    <ng-content select="IListDivider"></ng-content>
+  </ng-container>
+  <ng-container *ngIf="(isActive | async) === false || (isActive | async) === null">
+    <StackLayout #panelHandle>
+      <ng-content select="IListPlaceholder"></ng-content>
+    </StackLayout>
+  </ng-container>
+</StackLayout>

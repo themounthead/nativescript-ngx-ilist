@@ -1,0 +1,17 @@
+{
+  "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+  "lib": {
+    "entryFile": "src/public_api.ts",
+     "umdModuleIds": {
+      "@ngrx/component-store": "@ngrx/component-store",
+      "tns-core-modules/platform": "tns-core-modules/platform",
+      "tns-core-modules/ui/page": "tns-core-modules/ui/page",
+      "tns-core-modules/ui/list-view": "tns-core-modules/ui/list-view",
+      "tns-core-modules/ui/layouts/stack-layout": "tns-core-modules/ui/layouts/stack-layout",
+      "tns-core-modules/ui/scroll-view": "tns-core-modules/ui/scroll-view",
+      "nativescript-angular/common": "nativescript-angular/common",
+      "nativescript-angular/element-registry": "nativescript-angular/element-registry"
+    }
+  },
+  "dest": "../dist/"
+}

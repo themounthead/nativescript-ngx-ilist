@@ -1,23 +1,29 @@
 import { Component } from '@angular/core';
 
+import { IListService } from 'nativescript-ngx-ilist';
+
+import { clamp, times } from 'ramda';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
+
   title = 'nativescript-ngx-ilist';
-  private counter = 42;
 
-  constructor() { }
+  public items = times(() => ({ h: clamp(50, 300, Math.floor(Math.random() * 300)) }), 100);
 
-  public getMessage() {
-    return this.counter > 0 ?
-      `${this.counter} taps left` :
-      'Hoorraaay! You unlocked the NativeScript clicker achievement!';
+  constructor(
+    private ilistService: IListService,
+  ) { }
+
+  public isActive(args) { console.log(args); }
+
+  public addMore() {
+    const list = times(() => ({ h: clamp(50, 300, Math.floor(Math.random() * 300)) }), 100);
+    this.ilistService.addItems(list);
   }
 
-  public onTap() {
-    this.counter--;
-  }
 }

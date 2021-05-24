@@ -1,8 +1,76 @@
-node_modules/
-platforms/
-node_modules/
-platforms/
-hooks/
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
-app/**/*.js
+# compiled output
+**/dist/
+**/public/
+/tmp
+/out-tsc
+/z.*
+backup.*
+**/assets
+**/fonts
+.firebase/
+e2e/**/*.js
+e2e/**/*.map
+e2e/reports/
 
+/platforms
+/hooks
+/App_Resources
+/report
+/firebase/functions/lib
+/vendor
+
+# dependencies
+**/node_modules/
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+.agignore
+.firebaserc
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+/tags
+/.update_backup
+*.jks
+*.svg
+*.png
+firebase.nativescript.json
+tsc-mobile
+tsc-mobile.*
+tsc-web
+tsc-web.*
+id_rsa*
+
+# System Files
+.DS_Store
+Thumbs.db
+*.babel
+*.ipa
+*.zip
+.env.*
+*.patch
+fastlane/*.xml
+/.bundle
+*.p8
