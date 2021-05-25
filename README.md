@@ -29,7 +29,7 @@ IListView control takes the list by renders the items incrementally, as you scro
 Import the module into your _app-module_ 
 
 ```
-import { IListViewModule } from 'ngx-partials';
+import { IListViewModule } from 'nativescript-ngx-ilist';
 
 ```
 
