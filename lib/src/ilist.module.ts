@@ -39,4 +39,4 @@ const DIRECTIVES = [
   ],
   schemas: [NO_ERRORS_SCHEMA],
 })
-export class IListModule { }
+export class IListViewModule { }

@@ -11,7 +11,7 @@ import { debounceTime, delay, distinctUntilChanged, filter, map, take, tap, thro
 
 import { IListItemComponent } from './ilist-item.component';
 import { IListComponent } from './ilist.component';
-import { IListService } from './ilist.service';
+import { IListViewService } from './ilist.service';
 
 @Directive({
   selector: 'IListView',
@@ -29,7 +29,7 @@ export class IListComponentDirective implements OnInit, AfterViewInit, OnDestroy
 
   constructor(
     @Inject(forwardRef(() => IListComponent)) private ilistComponent: IListComponent,
-    @Inject(forwardRef(() => IListService)) private ilistService: IListService,
+    @Inject(forwardRef(() => IListViewService)) private ilistService: IListViewService,
     @Inject(forwardRef(() => ElementRef)) private scrollView: ElementRef,
   ) { }
 
@@ -143,7 +143,7 @@ export class IListItemComponentDirective implements OnInit, AfterViewInit, OnDes
     @Inject(forwardRef(() => IListComponent)) private ilistComponent: IListComponent,
     @Inject(forwardRef(() => IListComponentDirective)) private ilistComponentDirective: IListComponentDirective,
     @Inject(forwardRef(() => IListItemComponent)) private ilistItemComponent: IListItemComponent,
-    @Inject(forwardRef(() => IListService)) private ilistService: IListService,
+    @Inject(forwardRef(() => IListViewService)) private ilistService: IListViewService,
     private elementRef: ElementRef,
     private changeDetectorRef: ChangeDetectorRef,
   ) { }

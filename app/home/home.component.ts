@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { IListService } from 'nativescript-ngx-ilist';
+import { IListViewService } from 'nativescript-ngx-ilist';
 
 import { clamp, times } from 'ramda';
 
@@ -16,7 +16,7 @@ export class HomeComponent {
   public items = times(() => ({ h: clamp(50, 300, Math.floor(Math.random() * 300)) }), 100);
 
   constructor(
-    private ilistService: IListService,
+    private ilistService: IListViewService,
   ) { }
 
   public isActive(args) { console.log(args); }

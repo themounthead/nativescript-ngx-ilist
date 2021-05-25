@@ -1,2 +1,2 @@
 export * from './ilist.module';
-export { IListService } from './ilist.service';
+export { IListViewService } from './ilist.service';

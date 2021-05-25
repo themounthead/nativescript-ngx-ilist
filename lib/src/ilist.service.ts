@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
-export class IListService {
+export class IListViewService {
 
   private feedSubject = new Subject<[]>();
 

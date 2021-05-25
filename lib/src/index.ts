@@ -1,1 +1,1 @@
-export { IListModule } from './ilist.module';
+export { IListViewModule } from './ilist.module';

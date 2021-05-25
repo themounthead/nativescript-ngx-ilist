@@ -5,7 +5,7 @@ import { ScrollView } from 'tns-core-modules/ui/scroll-view';
 import { Subscription } from 'rxjs';
 
 import { IListItemComponent } from './ilist-item.component';
-import { IListService } from './ilist.service';
+import { IListViewService } from './ilist.service';
 import { IListStore } from './ilist.store';
 
 @Component({
@@ -41,7 +41,7 @@ export class IListComponent extends ScrollView implements OnInit, AfterViewInit,
 
   constructor(
     public ilistStore: IListStore,
-    private ilistService: IListService,
+    private ilistService: IListViewService,
     private changeDetectorRef: ChangeDetectorRef,
     private elementRef: ElementRef,
   ) {

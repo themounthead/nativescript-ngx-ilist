@@ -29,7 +29,7 @@ IListView control takes the list by renders the items incrementally, as you scro
 Import the module into your _app-module_ 
 
 ```
-import { IListModule } from 'ngx-partials';
+import { IListViewModule } from 'ngx-partials';
 
 ```
 
@@ -51,10 +51,10 @@ below.
         <!-- You content goes here -->
         </IListContent>
         <IListDivider>
-        <!-- Use this for your item divider -->
+        <!-- Use this as an item separator -->
         </IListDivider>
         <IListPlaceholder>
-        <!-- The wireframe/skeleton placeholder -->
+        <!-- The wireframe/skeleton placeholder before content load -->
         </IListPlaceholder>
       </IListItem>
     </ng-template>
@@ -71,7 +71,7 @@ The IListView accepts __limit__ as an argument which is default to 30.
 
 It emits a value with the __eofItems__ emitter when the list has reaches the end, for async loading more data to the list.
 
-### IListService
+### IListViewService
 
 The IListService can be used to add more items to the list with the method
 __addItems()__

@@ -1,7 +1,7 @@
 import { NO_ERRORS_SCHEMA, NgModule } from '@angular/core';
 
 import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
-import { IListModule } from 'nativescript-ngx-ilist';
+import { IListViewModule } from 'nativescript-ngx-ilist';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,7 +21,7 @@ import { HomeComponent } from './home/home.component';
   imports: [
     NativeScriptModule,
     AppRoutingModule,
-    IListModule,
+    IListViewModule,
   ],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA],
